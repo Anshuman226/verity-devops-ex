@@ -21,6 +21,15 @@ pipeline {
         }
 		//Code ends for stage Compile
 		
+		
+		//Code starts for stage PMD
+		stage('PMD') {
+            steps {
+                sh 'mvn site'
+            }
+        }
+		//Code ends for stage PMD
+		
 		//Code starts for stage Install
 		stage('Install') {
             steps {
